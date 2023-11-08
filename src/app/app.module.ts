@@ -6,6 +6,8 @@ import { AppComponent } from 'src/app/app.component'
 import { AppRoutingModule } from 'src/app/app-routing.module'
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { HttpClientModule } from '@angular/common/http'
+import { EffectsModule } from '@ngrx/effects'
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +15,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
     BrowserModule,
     AuthModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: !isDevMode(),
@@ -22,7 +26,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
       traceLimit: 75,
       connectOutsideZone: true,
     }),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
