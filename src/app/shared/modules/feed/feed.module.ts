@@ -10,6 +10,7 @@ import { RouterLink, RouterModule } from '@angular/router'
 import { ErrorMessageModule } from 'src/app/shared/modules/error-message/error-message.module'
 import { LoadingModule } from 'src/app/shared/modules/loading/loading.module'
 import { PaginationModule } from 'src/app/shared/modules/pagination/pagination.module'
+import { TagListModule } from 'src/app/shared/modules/tag-list/tag-list.module'
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +20,7 @@ import { PaginationModule } from 'src/app/shared/modules/pagination/pagination.m
     ErrorMessageModule,
     LoadingModule,
     PaginationModule,
+    TagListModule,
   ],
   declarations: [FeedComponent],
   exports: [FeedComponent],
